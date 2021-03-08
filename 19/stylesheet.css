@@ -1,0 +1,289 @@
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+/*--------------------*/
+
+@font-face {
+  src: url('fonts/Roboto-Regular.ttf');
+  font-family: 'Roboto Regular';
+}
+@font-face {
+  src: url('fonts/Roboto-Bold.ttf');
+  font-family: 'Roboto Bold';
+}
+
+body {
+  font-family: 'Roboto Regular', Arial, Helvetica;
+}
+
+h1,
+h2 {
+  font-family: 'Roboto Bold';
+}
+
+p {
+  font-size: 14px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 20px 60px;
+  padding-top: 20px;
+}
+
+.header__nav-and-btn {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .menu-mob {
+    display: none;
+  }
+
+  header {
+    margin: 0px 40px 100px;
+    padding-top: 30px;
+  }
+
+  .header__nav-and-btn {
+    display: flex;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    display: inline;
+  }
+  li a {
+    padding: 0px 15px;
+    font-size: 16px;
+    color: rgb(27, 27, 27, 1);
+  }
+
+  .header__nav-and-btn button {
+    padding: 12px 30px;
+    border: 1px solid rgba(27, 27, 27, 0.4);
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-left: 25px;
+  }
+
+  a:hover,
+  button:hover {
+    color: red;
+    cursor: pointer;
+  }
+}
+
+.image-top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 55px;
+}
+.image-top img {
+  max-width: 240px;
+}
+@media (min-width: 768px) {
+  .image-top img {
+    max-width: unset;
+    width: 360px;
+  }
+}
+
+h1 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.content {
+  padding: 0px 20px 15px 20px;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: 0% 14%;
+  }
+}
+.content__collapsible {
+  background-color: rgba(247, 247, 248, 1);
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border-radius: 6px;
+  text-align: left;
+  outline: none;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.active,
+.content__collapsible:hover {
+  background-color: rgba(97, 161, 153, 0.15);
+  color: rgba(97, 161, 153, 1);
+}
+
+.content__text {
+  padding: 0 20px;
+  display: none;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.content__collapsible:after {
+  content: '\02795';
+  font-size: 14px;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: '\2796';
+}
+
+footer {
+  height: 125px;
+  background-color: rgb(63, 61, 86, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 50px;
+}
+footer p {
+  color: rgb(255, 255, 255, 1);
+  font-size: 16px;
+  padding: 30px 0px 0px 20px;
+  opacity: 0.4;
+}
+.footer-icons {
+  display: flex;
+  padding-left: 11px;
+}
+
+.footer-icons img {
+  padding: 17px 11px;
+}
+
+.icon-insta:hover,
+.icon-vk:hover,
+.icon-fb:hover {
+  background-color: rgb(35, 197, 57);
+}
+
+@media (min-width: 768px) {
+  p,
+  .content__collapsible {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 64px;
+  }
+  .subtitle {
+    font-size: 24px;
+  }
+  footer {
+    flex-direction: unset;
+    align-items: unset;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 120px;
+  }
+  footer p {
+    padding: unset;
+    padding-left: 40px;
+  }
+  .footer-icons {
+    padding-left: unset;
+    padding-right: 40px;
+  }
+  br {
+    display: none;
+  }
+}
