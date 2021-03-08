@@ -1,3 +1,2 @@
-!!!!!hh;
-YY;
+let x = 15;
 console.log('Hello!');
