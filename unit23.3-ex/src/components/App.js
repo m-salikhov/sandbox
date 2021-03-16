@@ -1,14 +1,19 @@
 import React from 'react';
 import '../styles/App.css';
+import Footer from './Footer';
+import Header from './Header';
+import Main from './Main';
 
-let userName = 'Maks';
+
 
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Hello {userName}</h1>
-      </div>
+      <>
+        <Header/>
+        <Main/>
+        <Footer/>
+      </>
     );
   }
 }
