@@ -29,7 +29,16 @@ module.exports = {
             },
           },
         ],
-      }
+      },
+      {
+        test: /\.(ttf)$/,
+        use: [ {loader: 'file-loader',
+        options: {
+          name: 'fonts/[hash]-[name].[ext]',
+        },
+      }]
+      },
+      
     ],
   },
   plugins: [

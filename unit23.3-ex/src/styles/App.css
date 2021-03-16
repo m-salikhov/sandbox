@@ -37,13 +37,21 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 
+@font-face {
+  src: url('../fonts/Roboto-Regular.ttf');
+  font-family: "Roboto Regular";
+}
+@font-face {
+  src: url('../fonts/Roboto-Bold.ttf');
+  font-family: "Roboto Bold";
+}
 
-/* body {
+body {
   font-family: "Roboto Regular", Arial, Helvetica;
 }
 h1,h2 {
   font-family: "Roboto Bold";
-} */
+}
 
 header {
   display: flex;
