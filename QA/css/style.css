@@ -1,0 +1,299 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+@font-face {
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-family: "Roboto Regular";
+}
+@font-face {
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-family: "Roboto Bold";
+}
+body {
+  font-family: "Roboto Regular", Arial, Helvetica;
+}
+
+p {
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 20px;
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 20px 60px;
+  padding-top: 20px;
+}
+
+.header__nav-and-btn {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .menu-mob {
+    display: none;
+  }
+
+  header {
+    margin: 0px 40px 100px;
+    padding-top: 30px;
+  }
+
+  .header__nav-and-btn {
+    display: flex;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  nav li {
+    display: inline;
+  }
+  nav li a {
+    padding: 0px 15px;
+    font-size: 16px;
+    color: #1b1b1b;
+  }
+  nav li a:hover {
+    color: red;
+    cursor: pointer;
+  }
+
+  .header__nav-and-btn button {
+    padding: 12px 30px;
+    border: 1px solid rgba(27, 27, 27, 0.4);
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-left: 25px;
+  }
+  .header__nav-and-btn button:hover {
+    color: red;
+    cursor: pointer;
+  }
+}
+.image-top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 55px;
+}
+.image-top img {
+  max-width: 240px;
+}
+
+@media (min-width: 768px) {
+  .image-top img {
+    max-width: unset;
+    width: 360px;
+  }
+}
+h1 {
+  font-family: "Roboto Bold";
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 64px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+}
+.content {
+  padding: 0px 20px 15px 20px;
+}
+.content .content__collapsible {
+  background-color: #f7f7f8;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border-radius: 6px;
+  text-align: left;
+  outline: none;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.content .content__collapsible:after {
+  content: "➕";
+  font-size: 14px;
+  float: right;
+  margin-left: 5px;
+}
+.content .content__collapsible:hover {
+  background-color: rgba(97, 161, 153, 0.15);
+  color: #61a199;
+}
+.content .content__collapsible.active {
+  background-color: rgba(97, 161, 153, 0.15);
+  color: #61a199;
+}
+.content .content__collapsible.active:after {
+  content: "➖";
+}
+.content .content__text {
+  padding: 0 20px;
+  display: none;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: 0% 14%;
+  }
+  .content .content__collapsible {
+    font-size: 20px;
+  }
+
+  br {
+    display: none;
+  }
+}
+footer {
+  height: 125px;
+  background-color: #3f3d56;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 50px;
+}
+footer p {
+  color: white;
+  font-size: 16px;
+  padding: 30px 0px 0px 20px;
+  opacity: 0.4;
+}
+footer .footer-icons {
+  display: flex;
+  padding-left: 11px;
+}
+footer .footer-icons img {
+  padding: 17px 11px;
+}
+
+.icon-insta:hover,
+.icon-vk:hover,
+.icon-fb:hover {
+  background-color: #23c539;
+}
+
+@media (min-width: 768px) {
+  footer {
+    flex-direction: unset;
+    align-items: unset;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 120px;
+  }
+  footer p {
+    padding: unset;
+    padding-left: 40px;
+  }
+  footer .footer-icons {
+    padding-left: unset;
+    padding-right: 40px;
+  }
+}
