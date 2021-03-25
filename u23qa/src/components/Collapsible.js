@@ -4,10 +4,10 @@ export default function Collapsible(props) {
     let [isOpen, setIsOpen] = useState(false);
     let [buttonClassName, setButtonClassName] = useState('content__collapsible');
 
-    let handleClick = function() {
-        setIsOpen(!isOpen);
+function handleClick() {
         if (isOpen === false) setButtonClassName (buttonClassName = 'content__collapsible active');
         else setButtonClassName (buttonClassName = 'content__collapsible');
+        setIsOpen(!isOpen);
     }
 
     return (
