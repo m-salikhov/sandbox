@@ -1,0 +1,26 @@
+GET http://localhost:5000/subs
+###
+GET http://localhost:5000/
+###
+GET http://localhost:5000/subs/6070b23bca7aac14f8a9fabc
+
+###
+POST http://localhost:5000/subs
+Content-Type: application/json
+
+{
+    "name": "Vasya",
+    "subChannel": "HollyCow"
+}
+###
+DELETE http://localhost:5000/subs/6079b430a133e31b789c5ba6
+
+###
+PATCH http://localhost:5000/subs/6070adf5455e4a143ca6b793
+Content-Type: application/json
+
+{
+    "name": "Shusha"
+}
+
+

@@ -1,0 +1,89 @@
+@import 'nullstyle.scss';
+@import 'header.scss';
+@import 'footer.scss';
+
+
+@font-face {
+  src: url('../fonts/Roboto-Regular.ttf');
+  font-family: 'Roboto Regular';
+}
+@font-face {
+  src: url('../fonts/Roboto-Bold.ttf');
+  font-family: 'Roboto Bold';
+}
+
+$font-stack: 'Roboto Regular', Arial, Helvetica;
+
+body {
+  font-family: $font-stack;
+}
+
+p {
+  font-size: 18px;
+}
+@media (min-width: 768px) {
+  p {
+    font-size: 20px;
+  }
+}
+
+
+
+main {
+  text-align: center;
+}
+p {
+  font-size: 20px;
+  color: #828282
+}
+.container {
+  margin-top: 30px;
+  padding: 0% 26.5%;
+}
+h1 {
+  font-family: 'Roboto Bold';
+  font-size: 64px;
+}
+h2 {
+  padding: 20px 0px;
+  font-size: 32px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+}
+input {
+  border: 1px solid rgba(27, 27, 27, 0.4);
+  border-radius: 6px;
+  width: 416px;
+  height: 44px;
+  font-size: 14px;
+  padding-left: 12px;
+}
+label {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rectangle {
+  text-align: center;
+  margin-top: 90px;
+  border-top: 1px solid rgba(27, 27, 27, 1);
+}
+.subButton {
+  padding: 16px 40px;
+  font-size: 16px;
+  border-radius: 6px;
+  margin: 16px 0px;
+}
+
+.date {
+  width: 416px;
+}
+.dateBirthday, .datePassport, .dateLicense {
+  width: 155px;
+}
+

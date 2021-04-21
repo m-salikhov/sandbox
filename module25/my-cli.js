@@ -27,7 +27,7 @@ const argv = yargs
         let funcComp = `import React from 'react';\n\nexport default function ${yargs.componentName}(props) {\n\treturn(\n\t\t<div>\n\n\t\t</div>\n\t);\n}`
         let classComp = `import React from 'react';\n\nexport default class ${yargs.componentName} extends React.Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\n\t\t\t</div>\n\t\t);\n\t}\n}`
 
-        if (yargs.arrow === true) fs.writeFile(path.resolve(__dirname,yargs.pathSave, yargs.componentName + '.js'), arrowComp,  (err) => {
+        if (yargs.arrow === true) fs.writeFile(path.join(__dirname,yargs.pathSave, yargs.componentName + '.js'), arrowComp,  (err) => {
             if (err) console.error(err);
             });
         if (yargs.function === true) fs.writeFile(path.join(__dirname,yargs.pathSave, yargs.componentName + '.js'), funcComp,  (err) => {
@@ -41,5 +41,11 @@ const argv = yargs
 
     .argv
 
-console.log(argv)
+// Примеры
+
+// Создаст файл с классовым компонентом в текущей папке
+// node my-cli crc MyComp -c
+
+// Создаст файл с функциональным компонентом в папке Comp (папка должна быть уже создана)
+// node my-cli crc MyComp1 comp -f
 

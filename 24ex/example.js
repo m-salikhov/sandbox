@@ -2,7 +2,7 @@ const yargs = require('yargs');
 const fs = require('fs/promises');
 const path = require('path');
 // const pf = path.parse(__filename, '/der');
-const pd = path.join(__dirname);
+const pd = path.resolve(__dirname);
 
 
  

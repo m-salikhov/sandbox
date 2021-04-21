@@ -1,0 +1,19 @@
+GET http://localhost:5000/posts
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWFrc2ltIiwiaWF0IjoxNjE4NzAyNDk0LCJleHAiOjE2MTg3MDI1NTR9.pAFPkfNMC8j3-EuNh0oQN-0ny3A0emB6ttpOS7xVKVU
+
+###
+POST http://localhost:8080/token
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWFrc2ltIiwiaWF0IjoxNjE4NzAyMzY5fQ.kgZbuAlb86QP1Z2tBVrzR1Xs8OO3aJazThonNo8cyUw"
+    
+}
+
+###
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+    "username": "Maksim"
+}

@@ -1,0 +1,24 @@
+GET http://localhost:5000/reg
+
+
+###
+POST http://localhost:5000/reg
+Content-Type: application/json
+
+{
+		"name": "Charles Darwin",
+		"bdayDate": "fff",
+		"email": "mya@gmail.com",
+		"phone": "8906ff50301",
+		"passport": "444455f55",
+		"passDate": "09.11.1900",
+		"passOrg": "mufn tp",
+		"passOrgCode": "900000",
+		"licenseNumber": "89f433322",
+		"dateLicense": "01.f1901",
+		"pass": "qwerty",
+		"passRepeat": "qwerty"
+	}
+###
+
+
