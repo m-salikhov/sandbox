@@ -1,5 +1,5 @@
-GET http://localhost:5000/posts
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWFrc2ltIiwiaWF0IjoxNjE4NzAyNDk0LCJleHAiOjE2MTg3MDI1NTR9.pAFPkfNMC8j3-EuNh0oQN-0ny3A0emB6ttpOS7xVKVU
+GET http://localhost:5001/posts
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWF4aW0iLCJpYXQiOjE2MTkxMTU2NjV9.ctZbJZamxEq-ajnEyaxy86pTUqEQKbUgzYAnn-GVufw
 
 ###
 POST http://localhost:8080/token
@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:8080/login
+POST http://localhost:5001/login
 Content-Type: application/json
 
 {

@@ -6,19 +6,28 @@ import jwt from 'jsonwebtoken';
 dotenv.config();
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5001;
 
 app.use(express.json());
 
 app.get('/posts', authToken, (req, res) => {
 	res.json(posts.filter((post) => post.username === req.user.name));
 });
+app.post('/login', (req, res) => {
+	//authentication user
 
-//Middleware for auth our token.
+	const user = { name: req.body.username };
+	const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
+	// res.header('authorization', `Bearer ${accessToken}`);
+	res.json({ accessToken: accessToken });
+});
+
+//test Middleware
 function authToken(req, res, next) {
+	console.log(req.headers);
 	const authHeader = req.headers['authorization'];
 	const token = authHeader && authHeader.split(' ')[1];
-	if (token == null) return res.status(401).send('not exist');
+	if (token == null) return res.sendStatus(401);
 
 	jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
 		if (err) return res.sendStatus(403);

@@ -45,6 +45,7 @@ export async function regNewUser(req, res) {
 			pass: hashedPass,
 			passRepeat: hashedPassRepeat,
 		});
+		console.log(user);
 		await user.save();
 		res.status(201).json('Вы зарегистрированы!');
 	} catch (err) {

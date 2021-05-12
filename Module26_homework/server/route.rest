@@ -20,5 +20,12 @@ Content-Type: application/json
 		"passRepeat": "qwerty"
 	}
 ###
+POST http://localhost:5000/val
+Content-Type: application/json
+
+{
+	"email": "test@test",
+	"pass": "test"
+}
 
 
